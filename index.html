@@ -891,7 +891,7 @@ function fetchAndLoadCSV() {
         }
       });
 
-    fetch('https://raw.githubusercontent.com/Wick1366/solid-robot/main/match_scores.csv')
+    fetch('https://github.com/chaminda03/vlegends-cricket/match_scores.csv')
       .then(response => response.text())
       .then(text => {
         const data = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
