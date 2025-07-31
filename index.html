@@ -1093,7 +1093,7 @@ function fetchAndLoadCSV() {
     const now = new Date();
     document.getElementById('lastUpdated').innerHTML = `Last Updated: ${now.toLocaleString()} <button class="live-badge" style="margin-left:10px;">LIVE</button>`;
     
-    fetch('https://raw.githubusercontent.com/Wick1366/solid-robot/main/tournament_results.csv')
+    fetch('https://raw.githubusercontent.com/chaminda03/vlegends-cricket/main/tournament_results.csv')
       .then(response => response.text())
       .then(text => {
         const rows = text.trim().split('\n').map(row => row.split(','));
@@ -1700,7 +1700,7 @@ function enableKnockoutTeamPopups() {
 const origFetchAndLoadCSV_popup = fetchAndLoadCSV;
 fetchAndLoadCSV = function() {
   origFetchAndLoadCSV_popup();
-  fetch('https://raw.githubusercontent.com/Wick1366/solid-robot/main/match_scores.csv')
+  fetch('https://raw.githubusercontent.com/chaminda03/vlegends-cricket/main/match_scores.csv')
     .then(r => r.text())
     .then(text => {
       const data = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
