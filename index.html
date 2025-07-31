@@ -817,7 +817,7 @@ function fetchAndLoadCSV() {
     const now = new Date();
     document.getElementById('lastUpdated').innerHTML = `Last Updated: ${now.toLocaleString()} <button class="live-badge" style="margin-left:10px;">LIVE</button>`;
     
-    fetch('https://raw.githubusercontent.com/Wick1366/solid-robot/main/tournament_results.csv')
+    fetch('https://github.com/chaminda03/vlegends-cricket/tournament_results.csv')
       .then(response => response.text())
       .then(text => {
         const rows = text.trim().split('\n').map(row => row.split(','));
